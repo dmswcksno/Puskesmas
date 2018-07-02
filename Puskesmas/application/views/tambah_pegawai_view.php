@@ -28,10 +28,10 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item ">
+      <li class="nav-item active">
         <a class="nav-link" href="Pegawai">Pegawai<span class="sr-only">(current)</span></a>
       </li>
     <form class="form-inline mt-2 mt-md-0">
@@ -40,18 +40,26 @@
   </div>
 </nav>
  </div>
-    <main role="main" class="container">
-      <div class="jumbotron">
-        <div class="container">
-        
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h1> Anda Berhasil Login </h1><br>
-          <h2> Selamat Datang : </h2> <h1> <?php echo $username?></h1>
-        </div>
-          <br>
-        </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <?php echo form_open_multipart('pegawai/create'); ?>
+      <legend>Tambah Data Pegawai</legend>
+      <?php echo validation_errors(); ?>
+
+      <div class="form-group">
+          <label for="">Nama</label>
+        <input type="text" class="form-control" name="nama" placeholder="Input field">
+            <label for="">Alamat</label>
+        <input type="text" class="form-control" name="alamat" placeholder="Input field">
+            <label for="">Tgl Lahir</label>
+        <input type="Date" class="form-control" name="tglLahir" placeholder="Date">
+            <label for="">Foto</label>
+        <input type="File" class="form-control" name="foto" placeholder="upload file">
+
+
       </div>
-    </main>
+      <button type="submit" class="btn btn-primary">submit</button>
+      <?php echo form_close(); ?>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

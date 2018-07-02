@@ -28,10 +28,10 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item ">
+      <li class="nav-item active">
         <a class="nav-link" href="Pegawai">Pegawai<span class="sr-only">(current)</span></a>
       </li>
     <form class="form-inline mt-2 mt-md-0">
@@ -40,18 +40,12 @@
   </div>
 </nav>
  </div>
-    <main role="main" class="container">
-      <div class="jumbotron">
-        <div class="container">
-        
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h1> Anda Berhasil Login </h1><br>
-          <h2> Selamat Datang : </h2> <h1> <?php echo $username?></h1>
-        </div>
-          <br>
-        </div>
-      </div>
-    </main>
+  
+<?php 
+  echo "Sukses Simpan Data";
+
+  echo anchor('pegawai', 'Masukan Data Lagi'); 
+?>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

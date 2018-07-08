@@ -6,57 +6,41 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Puskesmas</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Login View</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/login.css') ?>"></style>
+   <!--  <script type="text/javascript" href="<?php echo base_url('assets/js/login.js') ?>"></script> -->
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4">
-          <form class="form-signin" method="post" action="<?php echo base_url('index.php/Login/cekLogin') ?>">
-                <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-                <h2 class="text-center" style="color: #5cb85c;"> <strong> Login  </strong></h2><hr />
-
-                              <div class="row">
-                                 <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <div class="form-group">
-                                       <div class="input-group">
-                                          <div class="input-group-addon">
-                                             <span class="glyphicon glyphicon-user"></span>
-                                          </div>
-                                          <input type="text" placeholder="Username" id="username" name="username" class="form-control">
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
-                              <div class="row">
-                                 <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <div class="form-group">
-                                       <div class="input-group">
-                                          <div class="input-group-addon">
-                                             <span class="glyphicon glyphicon-lock"></span>
-                                          </div>
-
-                                          <input type="password" placeholder="Password" name="password" class="form-control">
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                <button class="btn btn-success btn-block btn-lg" type="submit">LOGIN</button>
-                
-                <a href="<?php echo base_url('index.php/Login/register') ?>" class="btn btn-warning btn-block btn-lg">DAFTAR</a>
-            </form>
+<div class="row" style="margin-top:60px">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+              <form class="form-signin"  method="post" action="<?php echo base_url('index.php/Login/cekLogin') ?>">
+      <fieldset>
+        <h2><center>Please Sign In</center></h2>
+        <hr class="colorgraph">
+        <div class="form-group">
+                    <input type="text" id="username" name="username" class="form-control input-group-sm" placeholder="Username">
         </div>
-        <div class="col-sm-4"></div>
-      </div> 
-    
+        <div class="form-group">
+                    <input type="password" id="password" name="password" class="form-control input-group-sm" placeholder="Password">
+        </div>
+        <hr class="colorgraph">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+                        <input type="submit" class="btn btn-group-sm btn-success btn-block" value="Login" method="post" action="<?php echo base_url('index.php/Login/cekLogin') ?>">
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <a href="<?php echo base_url('index.php/Login/register') ?>" class="btn btn-group-sm btn-primary btn-block">Register</a>
+          </div>
+        </div>
+      </fieldset>
+    </form>
   </div>
+</div>
+
+</div>
   </body>
 </html>

@@ -28,33 +28,48 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="Home">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item ">
+      <li class="nav-item">
         <a class="nav-link" href="Pegawai">Pegawai<span class="sr-only">(current)</span></a>
       </li>
-       <li class="nav-item ">
+      <li class="nav-item active">
         <a class="nav-link" href="Antrian">Antrian<span class="sr-only">(current)</span></a>
       </li>
-
     <form class="form-inline mt-2 mt-md-0">
           <a href="<?php echo base_url('index.php/Login/logout') ?>" class="btn btn-warning my-2 my-sm-0 ml-2">LOGOUT</a>
     </form>
   </div>
 </nav>
  </div>
-    <main role="main" class="container">
-      <div class="jumbotron">
-        <div class="container">
-        
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h1> Anda Berhasil Login </h1><br>
-          <h2> Selamat Datang : </h2> <h1> <?php echo $username?></h1>
-        </div>
-          <br>
-        </div>
-      </div>
+   <main role="main" class="container">
+      <a href="<?php echo base_url('index.php/Antrian/create') ?>" class="btn btn-primary my-3">Tambah</a>
+      <table class="table table-hover">
+        <thead>
+          <th>Nama</th>
+          <th>Alamat</th>
+          <th>No Telpon</th>
+          <th>Aksi</th>
+
+        </thead>
+        <tbody>
+          <?php foreach ($antrian_list as $key => $value): ?>
+            <tr>
+              <td><?php echo $value['nama'] ?></td>
+              <td><?php echo $value['alamat'] ?></td>
+              <td><?php echo $value['notlp'] ?></td>
+              <!-- <td><img src="<?php echo base_url()?>assets/uploads/<?php echo $value['foto']?>" alt="" width=100 height=100></td>
+              <td> -->
+                <td>
+                <a href="<?php echo base_url("index.php/Antrian/update/".$value['id']) ?>" class="btn btn-sm btn-success">Edit</a>
+                <a href="<?php echo base_url("index.php/Antrian/deleteData/".$value['id']) ?>" class="btn btn-sm btn-danger">Hapus</a>
+              </td>
+            </tr>
+            
+          <?php endforeach ?>
+        </tbody>
+      </table>
     </main>
 
     <!-- Bootstrap core JavaScript

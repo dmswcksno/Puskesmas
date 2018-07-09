@@ -28,34 +28,45 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="Home">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item ">
+      <li class="nav-item active">
         <a class="nav-link" href="Pegawai">Pegawai<span class="sr-only">(current)</span></a>
       </li>
-       <li class="nav-item ">
+      <li class="nav-item ">
         <a class="nav-link" href="Antrian">Antrian<span class="sr-only">(current)</span></a>
       </li>
-
     <form class="form-inline mt-2 mt-md-0">
           <a href="<?php echo base_url('index.php/Login/logout') ?>" class="btn btn-warning my-2 my-sm-0 ml-2">LOGOUT</a>
     </form>
   </div>
 </nav>
  </div>
-    <main role="main" class="container">
-      <div class="jumbotron">
-        <div class="container">
-        
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h1> Anda Berhasil Login </h1><br>
-          <h2> Selamat Datang : </h2> <h1> <?php echo $username?></h1>
-        </div>
-          <br>
-        </div>
-      </div>
-    </main>
+   
+   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <?php echo form_open('pegawai/update/'.$this->uri->segment(3)); ?>
+  <legend>Edit Data Pegawai</legend>
+  <?php echo validation_errors(); ?>
+  <div class="form-group">
+    <label for="">Nama</label>
+    <input type="text" class="form-control" name="nama" id="nama" value="<?php echo $pegawai[0]->nama ?>" placeholder="Input field">
+  </div>
+    <div class="form-group">
+    <label for="">Tanggal Lahir</label>
+    <input type="Date" class="form-control" name="tanggalLahir" id="tanggalLahir" value="<?php echo $pegawai[0]->tanggalLahir ?>" placeholder="Input field">
+  </div>
+  <div class="form-group">
+    <label for="">alamat</label>
+    <input type="text" class="form-control" name="alamat" id="alamat" value="<?php echo $pegawai[0]->alamat ?>" placeholder="Input field">
+  </div>
+  <div class="form-group">
+    <label for="">Foto</label>
+    <input type="File" class="form-control" name="foto" id="foto" value="<?php echo $pegawai[0]->foto ?>" placeholder="upload file">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <?php echo form_close(); ?>
+</div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

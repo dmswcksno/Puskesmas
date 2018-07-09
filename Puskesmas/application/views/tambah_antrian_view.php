@@ -28,34 +28,39 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="Home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item ">
         <a class="nav-link" href="Pegawai">Pegawai<span class="sr-only">(current)</span></a>
       </li>
-       <li class="nav-item ">
+      <li class="nav-item active">
         <a class="nav-link" href="Antrian">Antrian<span class="sr-only">(current)</span></a>
       </li>
-
     <form class="form-inline mt-2 mt-md-0">
           <a href="<?php echo base_url('index.php/Login/logout') ?>" class="btn btn-warning my-2 my-sm-0 ml-2">LOGOUT</a>
     </form>
   </div>
 </nav>
  </div>
-    <main role="main" class="container">
-      <div class="jumbotron">
-        <div class="container">
-        
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h1> Anda Berhasil Login </h1><br>
-          <h2> Selamat Datang : </h2> <h1> <?php echo $username?></h1>
-        </div>
-          <br>
-        </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <?php echo form_open_multipart('antrian/create'); ?>
+      <legend>Daftar Antrian </legend>
+      <?php echo validation_errors(); ?>
+
+      <div class="form-group">
+          <label for="">Nama</label>
+        <input type="text" class="form-control" name="nama" placeholder="Input field">
+            <label for="">Alamat</label>
+        <input type="text" class="form-control" name="alamat" placeholder="Input field">
+            <label for="">No Telpon</label>
+        <input type="text" class="form-control" name="notlp" placeholder="Input field">
+
+
       </div>
-    </main>
+      <button type="submit" class="btn btn-primary">submit</button>
+      <?php echo form_close(); ?>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

@@ -37,6 +37,9 @@
        <li class="nav-item ">
         <a class="nav-link" href="Antrian">Antrian<span class="sr-only">(current)</span></a>
       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="User">User <span class="sr-only">(current)</span></a>
+      </li>
 
     <form class="form-inline mt-2 mt-md-0">
           <a href="<?php echo base_url('index.php/Login/logout') ?>" class="btn btn-warning my-2 my-sm-0 ml-2">LOGOUT</a>

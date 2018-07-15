@@ -32,7 +32,7 @@
         <a class="nav-link" href="Home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="Pegawai">Pegawai<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="Pegawai">Dokter<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item ">
         <a class="nav-link" href="Antrian">Antrian<span class="sr-only">(current)</span></a>
@@ -63,6 +63,14 @@
   <div class="form-group">
     <label for="">Foto</label>
     <input type="File" class="form-control" name="foto" id="foto" value="<?php echo $pegawai[0]->foto ?>" placeholder="upload file">
+  </div>
+  <div class="form-group">
+    <label for="">Spesialis</label>
+    <input type="text" class="form-control" name="alamat" id="spesialis" value="<?php echo $pegawai[0]->spesialis ?>" placeholder="Input field">
+  </div>
+  <div class="form-group">
+    <label for="">Status</label>
+    <input type="text" class="form-control" name="status" id="alamat" value="<?php echo $pegawai[0]->status ?>" placeholder="Input field">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
   <?php echo form_close(); ?>

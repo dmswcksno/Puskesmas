@@ -25,6 +25,7 @@ class Antrian extends CI_Controller {
 
 		if ($this->form_validation->run()==FALSE)
 		{
+		
 		$this->load->view('tambah_antrian_view');
 			
 		}

@@ -13,6 +13,7 @@
 			// $tgl=$this->input->post('tglLahir');
 			// $tglBaru=date_format(new DateTime($tgl),"Y-m-d");
 			$object = array(
+				'noantri' => $this->input->post('noantri'),
 				'nama' => $this->input->post('nama'),
 				'alamat' => $this->input->post('alamat'),
 				'notlp' => $this->input->post('notlp'));
@@ -43,7 +44,6 @@
         	if ($this->db->delete("antrian", "id = ".$id)) { 
             return true; 
         }
-      } 
+      }       
 	}
-
 ?>

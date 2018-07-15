@@ -19,11 +19,13 @@ class Pegawai extends CI_Controller {
 		$this->form_validation->set_rules('nama', 'Nama', 'trim|required');
 		$this->form_validation->set_rules('alamat', 'ALamat', 'trim|required');
 		$this->form_validation->set_rules('tglLahir', 'Tgl Lahir', 'trim|required');
-
+		$this->form_validation->set_rules('spesialis', 'Spesialis', 'trim|required');
+		$this->form_validation->set_rules('status', 'status', 'trim|required');
 		
 
 		if ($this->form_validation->run()==FALSE)
 		{
+			
 			$this->load->view('tambah_pegawai_view');
 		}
 		else
@@ -59,6 +61,8 @@ class Pegawai extends CI_Controller {
 		$this->form_validation->set_rules('nama', 'Nama', 'trim|required');
 		$this->form_validation->set_rules('alamat', 'ALamat', 'trim|required');
 		$this->form_validation->set_rules('tanggalLahir', 'Tgl Lahir', 'trim|required');
+		$this->form_validation->set_rules('Spesialis', 'Spesialis', 'trim|required');
+		$this->form_validation->set_rules('status', 'Status', 'trim|required');
 
 		$this->load->model('pegawai_model');
 		$data['pegawai'] = $this->pegawai_model->getPegawai($id);

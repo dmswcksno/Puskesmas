@@ -32,7 +32,7 @@
         <a class="nav-link" href="Home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="Pegawai">Pegawai<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="Pegawai">Dokter<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="Antrian">Antrian<span class="sr-only">(current)</span></a>
@@ -45,10 +45,11 @@
  </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <?php echo form_open_multipart('antrian/create'); ?>
+      <div class="container">
       <legend>Daftar Antrian </legend>
       <?php echo validation_errors(); ?>
 
-      <div class="form-group">
+        <div class="form-group">
           <label for="">Nama</label>
         <input type="text" class="form-control" name="nama" placeholder="Input field">
             <label for="">Alamat</label>
@@ -61,7 +62,7 @@
       <button type="submit" class="btn btn-primary">submit</button>
       <?php echo form_close(); ?>
     </div>
-
+  </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

@@ -47,20 +47,26 @@
       <a href="<?php echo base_url('index.php/Pegawai/create') ?>" class="btn btn-primary my-3">Tambah</a>
       <table class="table table-hover">
         <thead>
-          <th>Nama</th>
+          <th>No</th>
+          <th>Nama Dokter</th>
           <th>Tanggal Lahir</th>
           <th>Alamat</th>
           <th>Foto</th>
+          <th>Spesialis</th>
+          <th>Status</th>
           <th>Aksi</th>
 
         </thead>
         <tbody>
           <?php foreach ($pegawai_list as $key => $value): ?>
             <tr>
+              <td><?php echo $value['id'] ?></td>
               <td><?php echo $value['nama'] ?></td>
               <td><?php echo $value['tanggalLahir'] ?></td>
               <td><?php echo $value['alamat'] ?></td>
               <td><img src="<?php echo base_url()?>assets/uploads/<?php echo $value['foto']?>" alt="" width=100 height=100></td>
+              <td><?php echo $value['spesialis'] ?></td>
+              <td><?php echo $value['status'] ?></td>
               <td>
                 <a href="<?php echo base_url("index.php/Pegawai/update/".$value['id']) ?>" class="btn btn-sm btn-success">Edit</a>
                 <a href="<?php echo base_url("index.php/Pegawai/deleteData/".$value['id']) ?>" class="btn btn-sm btn-danger">Hapus</a>

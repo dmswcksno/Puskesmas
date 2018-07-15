@@ -16,7 +16,9 @@
 				'nama' => $this->input->post('nama'),
 				'alamat' => $this->input->post('alamat'),
 				'tanggalLahir' => $tglBaru,
-				'foto' => $this->upload->data('file_name'));
+				'foto' => $this->upload->data('file_name'),
+				'spesialis' => $this->input->post('spesialis'),
+				'status' => $this->input->post('status'));
 			$this->db->insert('pegawai', $object);
 		}
 
@@ -32,7 +34,9 @@
 			$data = array(
 				'nama' => $this->input->post('nama'),
 				'tanggalLahir' => $this->input->post('tanggalLahir'),
-				'alamat' => $this->input->post('alamat'));
+				'alamat' => $this->input->post('alamat'),
+				'spesialis' => $this->input->post('spesialis'),
+				'status' => $this->input->post('status'));
 				//'foto' => $this->upload->data('file_name'));
 			$this->db->where('id', $id);
 			$this->db->update('pegawai', $data);
@@ -44,6 +48,7 @@
             return true; 
         }
       } 
+
 	}
 
 ?>

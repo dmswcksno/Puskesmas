@@ -32,7 +32,7 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="Pegawai">Pegawai<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="Pegawai">Dokter<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="Antrian">Antrian<span class="sr-only">(current)</span></a>
@@ -49,7 +49,7 @@
       <?php echo validation_errors(); ?>
 
       <div class="form-group">
-          <label for="">Nama</label>
+          <label for="">Nama Dokter</label>
         <input type="text" class="form-control" name="nama" placeholder="Input field">
             <label for="">Alamat</label>
         <input type="text" class="form-control" name="alamat" placeholder="Input field">
@@ -57,7 +57,10 @@
         <input type="Date" class="form-control" name="tglLahir" placeholder="Date">
             <label for="">Foto</label>
         <input type="File" class="form-control" name="foto" placeholder="upload file">
-
+        <label for="">Spesialis</label>
+        <input type="text" class="form-control" name="spesialis" placeholder="Input field">
+        <label for="">Status</label>
+        <input type="text" class="form-control" name="status" placeholder="Input field">
 
       </div>
       <button type="submit" class="btn btn-primary">submit</button>
